@@ -1,0 +1,13 @@
+footer {
+    background-color: #ee427c; /* Màu nền */
+    color: #fff; /* Màu văn bản */
+    padding: 20px; /* Khoảng cách bên trong */
+    text-align: center; /* Canh giữa văn bản */
+    position: relative; /* Để footer ở phía dưới cùng */
+  }
+
+h1 {
+    text-align: center;
+    color: #e0245d; /* Căn giữa theo chiều ngang */
+  }
+
