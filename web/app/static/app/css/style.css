@@ -11,3 +11,13 @@ h1 {
     color: #e0245d; /* Căn giữa theo chiều ngang */
   }
 
+  .centered-box {
+    width: 1000px; /* Độ rộng của hộp */
+    height: 800px; /* Chiều cao của hộp */
+    background-color: #ffffff; /* Màu nền của hộp */
+    border-radius: 10px; /* Góc bo tròn */
+    margin: 0 auto; /* Đặt hộp ở giữa trang */
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+  }
