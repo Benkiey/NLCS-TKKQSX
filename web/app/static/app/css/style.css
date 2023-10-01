@@ -11,13 +11,81 @@ h1 {
     color: #e0245d; /* Căn giữa theo chiều ngang */
   }
 
-  .centered-box {
-    width: 1000px; /* Độ rộng của hộp */
-    height: 800px; /* Chiều cao của hộp */
-    background-color: #ffffff; /* Màu nền của hộp */
-    border-radius: 10px; /* Góc bo tròn */
-    margin: 0 auto; /* Đặt hộp ở giữa trang */
-    display: flex;
-    justify-content: center;
-    /*align-items: center;*/
-  }
+.container {
+    position: relative;
+}
+
+.centered-box {
+  width: 1500px;
+  height: 2000px;
+  background-color: #ffffff;
+  border: 1px solid #9094b3;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto; 
+  border-radius: 10px;
+}
+
+
+/*CIRCLE QUAY THỬ*/
+.c_container {
+  display: flex; /* Hiển thị các hình tròn theo chiều ngang */
+  justify-content: center;
+}
+
+.circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%; /* Tạo hình tròn bằng cách làm cho góc bo tròn là 50% */
+  background-color: rgb(223, 242, 255); /* Màu nền của hình tròn */
+  margin: 0 10px; /* Khoảng cách giữa các hình tròn */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Cỡ chữ trong hình tròn */
+  font-weight: bold; /* Chữ đậm */
+}
+
+/* Thêm kiểu dáng cho nút "Quay" */
+.spin-button {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient màu nền */
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu nền và hiệu ứng xoay */
+}
+
+/* Thêm hiệu ứng khi di chuột vào nút */
+.spin-button:hover {
+  background: linear-gradient(45deg, #ff5789, #ff1e56); /* Gradient màu nền thay đổi khi di chuột vào */
+}
+
+/* Hiệu ứng xoay cho nút khi được nhấn */
+.spin-button:active {
+  transform: scale(1.5);
+}
+
+/*//////////////////////*/
+.V_container {
+  position: fixed;
+  top: 50px; /* Điều chỉnh vị trí từ trên xuống dưới */
+  left: 50%; /* Đưa container về giữa màn hình */
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.square-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  margin-right: 5px;
+}

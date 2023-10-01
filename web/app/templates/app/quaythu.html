@@ -4,13 +4,152 @@
 {% block try %}
 <style>
     body {
-        background-color: #F8DAE9 ; 
+        background-color: #BDE0FE
     }
 </style>
 
 <div class=qt-content>
     <div class="centered-box">
-        <p>Nội dung bên trong khung bo góc</p>
+        <h1> QUAY THỬ </h1>
+        <p>Hãy điền 1 con số trên mỗi ô sau đó nhấn quay sau đó đối chiếu xem bạn có trúng thưởng không.</p>
+            <!-- Hàng 1: 6 ô vuông -->
+            <div class="V_container">
+                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
+            </div>
+            
+
+
+
+        <button class="spin-button" onclick="spinCircles()">Quay</button>
+        <p>------ G8 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+            </div>
+
+        <p>------ G7 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+            </div><br>
+
+        <p>------ G6 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div><br>      
+        <p>------ G5 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        <p>------ G4 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div><br>
+        <p>------ G3 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div><br>
+        <p>------ G2 ------<p>
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div><br>
+        <p>------ G1 ------</p>    
+            <div class="c_container"> 
+                <div class="circle"></div> 
+                <div class="circle"></div> 
+                <div class="circle"></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div><br>
+
+        <p>---------- ĐẶC BIỆT ----------<p>
+            <div class="c_container"> <!-- Div chứa các hình tròn -->
+                <div class="circle"></div> <!-- Hình tròn 1 -->
+                <div class="circle"></div> <!-- Hình tròn 2 -->
+                <div class="circle"></div> <!-- Hình tròn 3 -->
+                <div class="circle"></div> <!-- Hình tròn 4 -->
+                <div class="circle"></div> <!-- Hình tròn 5 -->
+                <div class="circle"></div> <!-- Hình tròn 6 -->
+            </div>
+        <p>--------------------------------<p>
     </div>
 </div>
 {% endblock try %}
