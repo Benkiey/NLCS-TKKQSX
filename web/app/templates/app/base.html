@@ -1,57 +1,77 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        <link href="{%static 'app/css/style.css' %}" rel="stylesheet" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>TKSXKT</title>
-    </head>
+<head>
+    <meta charset="utf-8">
+    <link href="{% static 'app/css/styles.css' %}" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TKSXKT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="{% static 'app/images/Icon.png' %}">
+</head>
 
-    <body>
-        <!--Header menu -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="{% url 'home' %}">
-                <img src=" {% static 'app/images/LOGO.png' %}" height="50" width ="50" />
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Trang chủ</a>
-                  </li>
+<body>
+    <!--Header menu -->
+    <header>
+        <img src="{% static 'app/images/LOGO F.png' %}" height="128" width="256" alt="logo">
+        <nav>
+          <a class="hm" href="{% url 'home' %}"><button class="button-home">Trang chủ</button></a>
+        </nav>
+        <nav>
+          <a class="tk" href="{% url 'thongke' %}"><button class="button-thongke">Thống kê</button></a>
+        </nav>
+        <nav>
+          <a class="qt" href="{% url 'quaythu' %}"><button class="button-quaythu">Quay thử</button></a>
+        </nav>
 
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'thongke' %}">Thống kê</a>
-                  </li>
+    </header>
+    <!-- Main body -->
+    {% block banner_s %} {% endblock banner_s %}
 
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{% url 'quaythu' %}">Quay thử</a>
-                  </li>
+    {% block tke_content %} {% endblock tke_content %}
 
-                </ul>
-              </div>
-            </div>
-          </nav>
+    {% block try %} {% endblock try %}
+    <!--script src="" async defer></script--> 
+    <script src="{% static 'app/js/script3.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script>
+      // Lấy tham chiếu đến canvas
+      var ctx = document.getElementById('myChart').getContext('2d');
+      
+      // Dữ liệu biểu đồ từ number_counts
+      var data = {
+          labels: [{% for num, count in number_counts %}"{{ num }}",{% endfor %}],
+          datasets: [{
+              label: 'Số lần xuất hiện',
+              data: [{% for num, count in number_counts %}{{ count }}, {% endfor %}],
+              backgroundColor: ['#AAE5FC'],
+              borderColor: ['#8ED3F3'], // Màu đường viền cột
+              borderWidth: 1 // Độ rộng đường viền cột
+          }]
+      };
+      
+      var myChart = new Chart(ctx, {
+          type: 'bar', // Loại biểu đồ (có thể là 'line', 'bar', 'pie', v.v.)
+          data: data,
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true, // Bắt đầu trục Y từ 0
+                      max: 10 // Đặt giá trị tối đa của trục Y
+                  }
+              }
+          }
+      });
+      </script>
 
-        <!-- Main body -->
-        {% block main-content %} {% endblock main-content %}
-        {% block banner_slider %} {% endblock banner_slider %}
 
-        {% block tke_content %} {% endblock tke_content %}
+    
 
-        {% block try %} {% endblock try %}
-        <!--script src="" async defer></script--> 
-        <script src="{% static 'app/js/script.js' %}"></script>
-        <!-- footer -->
-
-        <footer class="container-- fluid gb-success text-center fixed-bottom p-2 mt-5">
-            copyright
-        </footer>
-    </body>
+    <!-- footer -->
+    <footer class="footer">
+        copyright
+    </footer>
+</body>
 </html>

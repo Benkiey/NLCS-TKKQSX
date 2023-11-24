@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/** {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fff8f4;
+}*/
+
+button{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.nav-link{
+    list-style: none;
+}
+
+
+/* Đặt màu cho nút Trang chủ */
+.button-home {
+    background-color: #65CBE9; 
+}
+
+/* Đặt màu cho nút Thống kê */
+.button-thongke {
+    background-color: #68B6EF; 
+}
+
+/* Đặt màu cho nút Quay thử */
+.button-quaythu {
+    background-color: #6C8DFA; 
+}
+
+/* Đặt màu cho nút Contact */
+.button-contact {
+    background-color: #ff00ff; 
+}
+
+button{
+    padding: 30px 150px; /* kích thước */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+        /* Thêm hiệu ứng Sleek Fade-Down */
+        animation: fadeDown 0.25s ease-in-out;
+}
+
+button:hover {
+    background-color: #fa919a;
+}
+
+@keyframes fadeDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/*/////////////////////////////////////*/
+/*home*/
+
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Các phần tử con ngang hàng và chia đều khoảng trống giữa chúng */
+}
+.button-with-background1 {
+  color: #534cb8;
+  font-size: 30px;
+  background-image: none, url(../images/banner/B1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 900px;
+  height: 700px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  /* Thêm hiệu ứng Fade-Down */
+  animation: fadeDown 0.5s ease-in-out;
+}
+
+.button-with-background2 {
+  color: #4c496e;
+  font-size: 30px;
+  background-image: none, url(../images/banner/Br.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 900px;
+  height: 700px;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  /* Thêm hiệu ứng Fade-Down */
+  animation: fadeDown 1s ease-in-out;
+}
+
+/* Keyframes để tạo hiệu ứng Fade-Down */
+@keyframes fadeDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+/*//////////////////////////////////////////////////*/
+/*THỐNG KÊ*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  animation: fadeUp 0.5s ease-in-out;
+
+}
+h1 {
+  color: #ff9d9d;
+}
+
+table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+.flex-container {
+  display: flex;
+}
+
+.left-table {
+  flex: 1; /* Bảng trái chiếm toàn bộ phần còn lại của flex container */
+  margin-right: 20px; /* Khoảng cách giữa các bảng */
+}
+
+.right-tables {
+  flex: 1; /* Bảng phải chiếm toàn bộ phần còn lại của flex container */
+  display: flex;
+  flex-direction: column; /* Hiển thị các bảng theo chiều dọc */
+}
+
+.table-container {
+  width: 100%; /* Để các bảng chiếm toàn bộ chiều rộng của phần bên phải */
+  margin-bottom: 20px; /* Khoảng cách giữa các bảng phải */
+}
+
+.button-containertk {
+  display: flex;
+}
+
+.buttontk50 ,.buttontk100 ,.buttontk200,.buttontk500{
+  background-color: #ffe5ed; 
+  color: #34333f;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+}
+
+
+
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////////////*/
+/*QT*/
+.centered-box {
+  width: 1500px;
+  height: 2800px;
+  background-color: #fffbfb;
+  border: 10px solid #a74b67;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+
+/* HÌNH TRÒN */
+
+.c_container {
+    display: flex; /* Hiển thị các hình tròn theo chiều ngang */
+    justify-content: center;
+  }
+  
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Tạo hình tròn bằng cách làm cho góc bo tròn là 50% */
+    background-color: rgb(241, 255, 254); /* Màu nền của hình tròn */
+    margin: 10px; /* Khoảng cách giữa các hình tròn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; /* Cỡ chữ trong hình tròn */
+    font-weight: bold; /* Chữ đậm */
+    border: 1px solid #aac9dd;
+    
+    transition: transform 0.1s ease-in-out; /* Thêm transition cho hiệu ứng số */
+}
+
+.circle.spin {
+  transform: rotateY(720deg); /* Hiệu ứng quay hình tròn */
+}
+
+
+
+
+/*HÌNH VUÔNG*/
+.V_container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input {
+    width: 60px; /* Độ rộng của hộp input */
+    height: 60px; /* Độ cao của hộp input */
+    text-align: center;
+    border: 3px solid #ff8b8b; /* Đường viền đen cho hộp input */
+    font-size: 24px; /* Cỡ chữ tùy chọn */
+    margin: 5px;
+    border-radius: 10px
+  }
+  
+  #submit-button {
+    margin-top: 10px;
+  }
+  
+  
+
+/* NÚT QUAY "Quay" */
+.spin-button {
+  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient màu nền */
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 20px 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi màu nền và hiệu ứng xoay */
+}
+
+/* Thêm hiệu ứng khi di chuột vào nút */
+.spin-button:hover {
+  background: linear-gradient(45deg, #ff5789, #ff1e56); /* Gradient màu nền thay đổi khi di chuột vào */
+}
+
+/* Hiệu ứng xoay cho nút khi được nhấn */
+.spin-button:active {
+  transform: scale(1.5);
+}
+
+#generateNumbers {
+  background-color: #007bff; /* Màu nền */
+  color: #fff; /* Màu chữ */
+  border: none; /* Loại bỏ đường viền */
+  padding: 10px 20px; /* Kích thước của nút */
+  border-radius: 5px; /* Bo góc nút */
+  cursor: pointer; /* Biểu tượng con trỏ khi đưa chuột vào nút */
+}
+
+#generateNumbers:hover {
+  background-color: #0056b3; /* Màu nền khi đưa chuột vào nút */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tạo CSS cho phần footer */
+.footer {
+  background-color: rgb(71, 113, 175);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  /* Đặt footer ở cuối trang, ngay cả khi trang có ít nội dung */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

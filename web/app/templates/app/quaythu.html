@@ -2,30 +2,33 @@
 {% load static %}
 
 {% block try %}
-<style>
-    body {
-        background-color: #BDE0FE
-    }
-</style>
+
 
 <div class=qt-content>
     <div class="centered-box">
-        <h1> QUAY THỬ </h1>
-        <p>Hãy điền 1 con số trên mỗi ô sau đó nhấn quay sau đó đối chiếu xem bạn có trúng thưởng không.</p>
+        <h1> DỰ ĐOÁN - QUAY THỬ </h1>
+        <p>Hãy điền 1 con số trên mỗi ô dựa theo rút vé, nhấn quay sau đó đối chiếu xem bạn có trúng thưởng không.</p>
+        <p>hoặc chỉ cần nhấn nút quay để cho ra các số ngẫu nhiên</p>
             <!-- Hàng 1: 6 ô vuông -->
-            <div class="V_container">
-                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-                <input type="text" class="square-input" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');">
-            </div>
+            <h2>Rút vé ngẫu nhiên</h2>
+            <div id="randomNumbers1"></div>
             
+            <div id="randomNumbers2"></div>
+            
+            <div id="randomNumbers3"></div>
+            <button id="generateNumbers">Tạo vé mới</button>
 
-
-
-        <button class="spin-button" onclick="spinCircles()">Quay</button>
+            <h2>Điền vé </h2>
+            <div class="V_container">
+                <input type="text" class="input" maxlength="1">
+                <input type="text" class="input" maxlength="1">
+                <input type="text" class="input" maxlength="1">
+                <input type="text" class="input" maxlength="1">
+                <input type="text" class="input" maxlength="1">
+                <input type="text" class="input" maxlength="1">
+              </div>
+              
+        <button class="spin-button" onclick="startContinuousSpin()">Quay</button>
         <p>------ G8 ------<p>
             <div class="c_container"> 
                 <div class="circle"></div> 

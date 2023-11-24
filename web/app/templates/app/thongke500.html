@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block tke_content %}
-<h1>Hãy chọn số lần quay gần nhất</h1>
+<canvas id="myChart" width="10" height="2"></canvas>
 <div class="button-containertk">
 
     <a class="mtk" href="{% url 'thongke50' %}">
@@ -17,7 +17,6 @@
     <a class="mqt" href="{% url 'thongke500' %}">
         <button class="buttontk500">500</button>
     </a>
-
 </div>
 <br>
 
@@ -29,6 +28,7 @@
 
 <div class="flex-container">
     <div class="left-table">
+        <h1>Số lần quay gần nhất: 500</h1>
 
         <table>
         <thead>
@@ -91,108 +91,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %} <h2>Con số xuất hiện ít nhất:</h2>
-<table class="custom-table">
-    <tr>
-        <th>Con số</th>
-        <th>Số lần xuất hiện</th>
-    </tr>
-    {% for number in min_count_numbers %}
-        <tr>
-            <td>{{ number.number }}</td>
-            <td>{{ number.count }}</td>
-        </tr>
-    {% endfor %}
-</table>
-
-<h2>Con số xuất hiện nhiều nhất:</h2>
-<table class="custom-table">
-    <tr>
-        <th>Con số</th>
-        <th>Số lần xuất hiện</th>
-    </tr>
-    {% for number in max_count_numbers %}
-        <tr>
-            <td>{{ number.number }}</td>
-            <td>{{ number.count }}</td>
-        </tr>
-    {% endfor %}
-</table>
-
-<h2>Tất cả kết quả thống kê:</h2>
-<table class="custom-table">
-    <tr>
-        <th>Con số</th>
-        <th>Số lần xuất hiện</th>
-    </tr>
-    {% for stat in statistics %}
-        <tr>
-            <td>{{ stat.number|default:""|add:"0"|slice:"-2:" }}</td>
-            <td>{{ stat.count }}</td>
-        </tr>
-    {% endfor %}
-</table> {% endcomment %}
-
-
 {% endblock tke_content %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{% comment %} <h1>Thống kê kết quả</h1>
-<ul>
-    {% for stat in statistics %}
-        <li>{{ stat.number }} - Số lần xuất hiện: {{ stat.count }}</li>
-    {% endfor %}
-</ul>
-<h2>Các con số còn lại không có lần xuất hiện </h2>
-<ul>
-    {% for number in remaining_numbers %}
-        <li>{{ number }}</li>
-    {% endfor %}
-</ul> {% endcomment %}
